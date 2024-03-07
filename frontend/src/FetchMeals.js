@@ -14,7 +14,7 @@ const addMeal = (title, setTitle, setMeal) => {
     })
 }
 const editMeal = (mealId, title, setTitle, setMeal, setEditing) => {
-    axios.get('http://localhost:4000/editMeal', {_id:mealId, title})  
+    axios.post('http://localhost:4000/editMeal', {_id:mealId, title})  
     .then(({data}) => {console.log(data)
     setTitle("")
     setEditing(false)
