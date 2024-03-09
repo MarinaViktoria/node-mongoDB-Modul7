@@ -9,7 +9,7 @@ mongoose.set('strictQuery', false);
 
 const PORT = 4000 || process.env.port
 app.use(express.json())
-app.use(cors) 
+app.use(cors()) 
 
 mongoose
 .connect(process.env.MONGODB_LINK)
